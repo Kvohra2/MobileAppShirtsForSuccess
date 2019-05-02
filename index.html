@@ -173,8 +173,8 @@
                 <div class="backButton col-sm-08" style="background-color: #80FF00; border-right: 3px #5e5e5e solid;">
                     <h2>Back</h2>
                 </div>
-                <div class="donateButton col-sm-08" style="background-color: #80FF00; border-left: 3px #5e5e5e solid;">
-                    <button id="donateButtonPic" type="button" onclick="takePhoto()">Donate</button>
+                <div class="donateButton col-sm-08" style="background-color: #80FF00; border-left: 3px #5e5e5e solid;" onclick="takePhoto()">
+                    <h2>Donate</h2>
                     <img id="worldHandsImage" src=".\Images\world.png" alt="World Image">
                     <p id="photoStatusId"></p>
                 </div>
@@ -210,89 +210,89 @@
 	
 	<!-- Start of Profile Tab -->
 	<div id="Profile"	class="tabContent">	
-		<div class="wrapper">
-			<div class="row" style="background-color: #80FF00">
-				<div class="header row col-sm-16">
-					<h1>My Profile</h1>
-				</div>
-			</div>
+        <div class="wrapper">
+            <div class="row" style="background-color: #80FF00">
+                <div class="header row col-sm-16">
+                    <h1>My Profile</h1>
+                </div>
+            </div>
 
-			<div class="main-content">
-				<div class="row" style="background-color: #FFFFFF">
-					<div class="profileInfo">
-						<div class="userImg col-sm-06">
-							<img src=".\Images\user2.png" alt="Profile Picture">
-						</div>
-						<div class="infoText col-sm-05">
-							<p>Personal Info:</p>
-							<p>Name:</p>
-							<p>Street Address:</p>
-							<p>City/State/Zip:</p>
-						</div>
-						<div class="fillText col-sm-05">
-							<p>&nbsp;</p>
-							<p id="nameText">!</p>
-							<p id="streetText">!</p>
-							<p id="cityStateText">!</p>
-						</div>
-					</div>
-				</div>
+            <div class="main-content">
+                <div class="row" style="background-color: #FFFFFF">
+                    <div class="profileInfo">
+                        <div class="userImg col-sm-06">
+                            <img src=".\Images\user2.png" alt="Profile Picture">
+                        </div>
+                        <div class="infoText col-sm-05">
+                            <p>Personal Info:</p>
+                            <p>Name:</p>
+                            <p>Street Address:</p>
+                            <p>City/State/Zip:</p>
+                        </div>
+                        <div class="fillText col-sm-05">
+                            <p>&nbsp;</p>
+                            <p id="nameText">!</p>
+                            <p id="streetText">!</p>
+                            <p id="cityStateText">!</p>
+                        </div>
+                    </div>
+                </div>
 
-				<div class="row" style="background-color: rgba(128,255,0,0.4);">
-					<div class="donationInfo">
-						<div class="donation col-sm-06">
-							<h2>My Donations</h2>
-							<p>Total Amount Raised:</p>
-							<p>Total Items Donated:</p>
-							<p>Total People Funded:</p>
-						</div>
-						<div class="donationData col-sm-10">
-							<h2>&nbsp;</h2>
-							<p id="totalRaised">xx</p>
-							<p id="totalDonated">xx</p>
-							<p id="totalFunded">xx</p>
-						</div>
-					</div>
-				</div>
+                <div class="row" style="background-color: rgba(128,255,0,0.4);">
+                    <div class="donationInfo">
+                        <div class="donation col-sm-06">
+                            <h2>My Donations</h2>
+                            <p>Total Amount Raised:</p>
+                            <p>Total Items Donated:</p>
+                            <p>Total People Funded:</p>
+                        </div>
+                        <div class="donationData col-sm-10">
+                            <h2>&nbsp;</h2>
+                            <p id="totalRaised">xx</p>
+                            <p id="totalDonated">xx</p>
+                            <p id="totalFunded">xx</p>
+                        </div>
+                    </div>
+                </div>
 
-				<div class="row">
-					<div class="facts">
-						<div class="chartVisual col-sm-07">
-							<img src="#" alt="Donation Pie Chart" id="visualChart">
-						</div>
-						<div class="factInfo col-sm-09">
-							<p>General stats/facts about the amount of people helped from all users of the app </p>
-						</div>
-					</div>
-				</div>
-			</div>
+                <div class="row">
+                    <div class="facts">
+                        <div class="chartVisual col-sm-07">
+                            <img src="#" alt="Donation Pie Chart" id="visualChart">
+                        </div>
+                        <div class="factInfo col-sm-09">
+                            <p>General stats/facts about the amount of people helped from all users of the app </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<div class="row">
-				<div class="bottomMenu">
-					<div class="stories col-sm-08">
+            <div class="row" id="logoutRow">
+                <button name="logoutButton" onclick="showTab(event, 'Login')">Logout</button>
+            </div>
+
+            <div class="row">
+                <div class="bottomMenu">
+                    <div class="stories col-sm-08">
                         <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
-						    <img src=".\Images\stories.png" alt="Stories Icon">
+                            <img src=".\Images\stories.png" alt="Stories Icon">
                         </a>
-						<p>Stories</p>
-					</div>
-					<div class="donate col-sm-04">
+                        <p>Stories</p>
+                    </div>
+                    <div class="donate col-sm-04">
                         <a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">
-						    <img src=".\Images\shirt.png" alt="Clothing Icon">
+                            <img src=".\Images\shirt.png" alt="Clothing Icon">
                         </a>
-					</div>
-					<div class="myProfile col-sm-08">
+                    </div>
+                    <div class="myProfile col-sm-08">
                         <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
-						    <img src=".\Images\user2.png" alt="User Icon">
+                            <img src=".\Images\user2.png" alt="User Icon">
                         </a>
-						<p>Profile</p>
-					</div>
-				</div>
-			</div>
-
-			<div class="row" id="logoutRow">
-				<button name="logoutButton" onclick="showLogin()">Logout</button>
-			</div>
-		</div>
+                        <p>Profile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 	<!-- End of Profile Tab -->
 	</div>
 
