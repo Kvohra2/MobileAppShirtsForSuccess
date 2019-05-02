@@ -271,9 +271,13 @@
                 <button name="logoutButton" onclick="showTab(event, 'Login')">Logout</button>
             </div>
 
-            <div class="row">
-                <div class="bottomMenu">
-                    <div class="stories col-sm-08">
+			<div class="row" id="logoutRow">
+				<button name="logoutButton" onclick="showLogin()">Logout</button>
+			</div>
+
+			<div class="row">
+				<div class="bottomMenu">
+					<div class="stories col-sm-08">
                         <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
                             <img src=".\Images\stories.png" alt="Stories Icon">
                         </a>
@@ -288,11 +292,11 @@
                         <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
                             <img src=".\Images\user2.png" alt="User Icon">
                         </a>
-                        <p>Profile</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+						<p>Profile</p>
+					</div>
+				</div>
+			</div>
+		</div>
 	<!-- End of Profile Tab -->
 	</div>
 
