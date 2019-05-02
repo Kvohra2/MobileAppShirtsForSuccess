@@ -16,10 +16,10 @@
 </head>
 
 <!-- onload event, show the proper tab -->
-<body onload="showLoginTab()">
+<body onload="showLogin()">
 <!-- Start at login -> initially Stories Tab, Profile (option to logout under profile), or donations, -->
 	
-	<div id="Login">
+	<div id="Login" class="tabContent">
 	<!-- The start of the Login Page -->
 		<div class="loginWrapper">
 			<div class="loginPage">
@@ -31,19 +31,23 @@
 				</div>
 				<a href="#">Register</a>
 				/
-				<a href="#">Forgot Password</a>
+				<a href="#">Forgot Password</a><br>
+
+				<!-- button that leads to Stories/Home Sreen, This is logging in successfuly-->
+				<button name="loginButton" onclick="showTab(event, 'Stories')">Login</button>
 			</div>
 		</div>
 	<!-- The end of the Login Table -->
 	</div>
 
 	<!-- The tab directory once in any of the tabs... on Login screen DO NOT HAVE VISIBLE-->
-	<ul class="tab">
-		<li><a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">Profile</li>
+	<ul class="tab" id="tabDirectory">
+
+		<li><a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">Profile</a></li>
 		
 		<!-- The home tab should be the starting tab for every load. -->
-		<li><a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">Stories</li>
-		<li><a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">Donations</li>
+		<li><a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">Stories</a></li>
+		<li><a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">Donations</a></li>
 	</ul>
 
 	<div id="Stories"	class="tabContent">
@@ -247,8 +251,8 @@
 				</div>
 			</div>
 
-			<div class="row">
-				<a href="#" class="col-sm-12" id="logoutButton" onclick="showTab(event, 'Login')">Logout</a>
+			<div class="row" id="logoutRow">
+				<button name="logoutButton" onclick="showLogin()">Logout</button>
 			</div>
 		</div>
 	<!-- End of Profile Tab -->
