@@ -135,12 +135,12 @@ body{
 	text-align: 		center;
 }
 
-.donateButton h2{
+.donateButton button{
 	display: 			inline;
 }
 
 .donateButton img{
-	width: 				26%;
+	width: 				19%;
 	display: 			inline;
 	vertical-align: 	middle;
 }
