@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -109,72 +109,105 @@
 		</div>	
 					
 
-		<div class="row">
-			<div class="bottomMenu">
-				<div class="stories col-sm-08">
-					<img src=".\Images\stories.png" alt="Stories Icon">
-					<p>Stories</p>
-				</div>
-				<div class="donate col-sm-04">
-					<img src=".\Images\shirt.png" alt="Clothing Icon">
-				</div>
-				<div class="myProfile col-sm-08">
-					<img src=".\Images\user2.png" alt="User Icon">
-					<p>Profile</p>
-				</div>
-			</div>
-		</div>
+        <div class="row">
+            <div class="bottomMenu">
+                <div class="stories col-sm-08">
+                    <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
+                        <img src=".\Images\stories.png" alt="Stories Icon">
+                    </a>
+                    <p>Stories</p>
+                </div>
+                <div class="donate col-sm-04">
+                    <a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">
+                        <img src=".\Images\shirt.png" alt="Clothing Icon">
+                    </a>
+                </div>
+                <div class="myProfile col-sm-08">
+                    <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
+                        <img src=".\Images\user2.png" alt="User Icon">
+                    </a>
+                    <p>Profile</p>
+                </div>
+            </div>
+        </div>
+
 	<!-- End of Stories Tab -->
 	</div>
 	
 	<!-- Start of Donations Tab -->
-	<div id="Donations"	class="tabContent">
-		<div class="row">
-			<div class="header row col-sm-16">
-				<h1>App Name and Logo Here</h1>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="clothingImage col-sm-16">
-				<img src="#" alt="Picture of item of clothing">
-			</div>
-		</div>
+    <div id="Donations" class="tabContent">
+        <div class="row">
+            <div class="header row col-sm-16">
+                <h1>App Name and Logo Here</h1>
+            </div>
+        </div>
 
-		<div class="row" style="background-color: rgba(128,255,0,0.4);">
-			<div class="details">
-				<div class="clothingText col-sm-05">
-					<h2>Amount:</h2>
-					<p>Brand:</p>
-					<p>Type:</p>
-					<p>Color:</p>
-					<p>Other Items here?<p>
-				</div>
-				<div class="clothingData col-sm-11">
-					<h2>$1.50</h2>
-					<p>xxx</p>
-					<p>xxx</p>
-					<p>xxx</p>
-				</div>
-			</div>
-		</div>
+        <div class="row">
+            <div class="clothingImage col-sm-16">
+                <img src="#" alt="Picture of item of clothing" id="photoImageId">
+            </div>
+        </div>
 
-
+        <div class="row" style="background-color: rgba(128,255,0,0.4);">
+            <div class="details">
+                <div class="clothingText col-sm-05">
+                    <h2>Amount:</h2>
+                    <p>Brand:</p>
+                    <p>Type:</p>
+                    <p>Color:</p>
+                    <p>Other Items here?<p>
+                </div>
+                <div class="clothingData col-sm-11">
+                    <h2>$1.50</h2>
+                    <p>xxx</p>
+                    <p>xxx</p>
+                    <p>xxx</p>
+                </div>
+            </div>
+        </div>
 
 
-		<div class="row">
-			<div class="confirmMenu">
-				<div class="backButton col-sm-08" style="background-color: #80FF00; border-right: 3px #5e5e5e solid;">
-					<h2>Back</h2>
-				</div>
-				<div class="donateButton col-sm-08" style="background-color: #80FF00; border-left: 3px #5e5e5e solid;">
-					<h2>Donate</h2>
-					<img id="worldHandsImage" src=".\Images\world.png" alt="World Image">
-				</div>
-			</div>
-		</div>
-	<!-- End of Donations Tab -->
-	</div>
+
+
+        <div class="row">
+            <div class="confirmMenu">
+                <div class="backButton col-sm-08" style="background-color: #80FF00; border-right: 3px #5e5e5e solid;">
+                    <h2>Back</h2>
+                </div>
+                <div class="donateButton col-sm-08" style="background-color: #80FF00; border-left: 3px #5e5e5e solid;">
+                    <button id="donateButtonPic" type="button" onclick="takePhoto()">Donate</button>
+                    <img id="worldHandsImage" src=".\Images\world.png" alt="World Image">
+                    <p id="photoStatusId"></p>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div class="row">
+            <div class="bottomMenu">
+                <div class="stories col-sm-08">
+                    <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
+                        <img src=".\Images\stories.png" alt="Stories Icon">
+                    </a>
+                    <p>Stories</p>
+                </div>
+                <div class="donate col-sm-04">
+                    <a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">
+                        <img src=".\Images\shirt.png" alt="Clothing Icon">
+                    </a>
+                </div>
+                <div class="myProfile col-sm-08">
+                    <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
+                        <img src=".\Images\user2.png" alt="User Icon">
+                    </a>
+                    <p>Profile</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Donations Tab -->
+    </div>
 	
 	<!-- Start of Profile Tab -->
 	<div id="Profile"	class="tabContent">	
@@ -238,14 +271,20 @@
 			<div class="row">
 				<div class="bottomMenu">
 					<div class="stories col-sm-08">
-						<img src=".\Images\stories.png" alt="Stories Icon">
+                        <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
+						    <img src=".\Images\stories.png" alt="Stories Icon">
+                        </a>
 						<p>Stories</p>
 					</div>
 					<div class="donate col-sm-04">
-						<img src=".\Images\shirt.png" alt="Clothing Icon">
+                        <a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">
+						    <img src=".\Images\shirt.png" alt="Clothing Icon">
+                        </a>
 					</div>
 					<div class="myProfile col-sm-08">
-						<img src=".\Images\user2.png" alt="User Icon">
+                        <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
+						    <img src=".\Images\user2.png" alt="User Icon">
+                        </a>
 						<p>Profile</p>
 					</div>
 				</div>

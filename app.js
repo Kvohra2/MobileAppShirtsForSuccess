@@ -1,5 +1,49 @@
 "use strict";
 
+var takePhotoButton
+var photoStatus
+var photoImage
+var imageFilename
+var options
+
+/* wait until all phonegap/cordova is loaded then call onDeviceReady*/
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+
+    StatusBar.overlaysWebView(false); // force ios to show status bar
+    showHomeTab();
+
+    takePhotoButton = document.getElementById('donateButtonPic')
+    photoStatus = document.getElementById('photoStatusId')
+    photoImage = document.getElementById('photoImageId')
+
+    options = {
+        quality: 40,
+        destinationType: Camera.DestinationType.FILE_URI,
+        sourceType: Camera.PictureSourceType.CAMERA,
+        correctOrientation: true,
+        mediaType: Camera.MediaType.PICTURE,
+        encodingType: Camera.EncodingType.JPEG,
+        cameraDirection: Camera.Direction.BACK,
+        targetWidth: 300,
+        targetHeight: 400
+    }
+}
+
+function takePhoto() {
+    navigator.camera.getPicture(photoSuccess, photoError, options)
+}
+
+function photoSuccess(imageURI) {
+    photoStatus.innerHTML = "Success!";
+    photoImage.src = imageURI
+}
+
+function photoError(errorMessage) {
+    photoStatus.innerHTML = "Failed: " + errorMessage;
+}
+
 function showLogin() {
 	var tabDirectory;
 
@@ -15,7 +59,6 @@ function showLogin() {
 	
  }
      
-
 function showTab(event, tabName) {
     // Declare all variables
     var i, tabContentElems, tabLinkElems;

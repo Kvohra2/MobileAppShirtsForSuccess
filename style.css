@@ -107,7 +107,7 @@ body{
 /*Stories tab formatting*/
 
 .story{
-	border-bottom: 		5px rgb(128,255,0,0.4) solid;
+	border-bottom: 		5px rgb(128,255,0) solid;
 	padding: 			1%;
 }
 
@@ -174,7 +174,7 @@ body{
 
 .donate img{
 	max-width: 			100%;
-	max-height: 		auto: 
+	max-height: 		none;
 }
 
 /*Style main Profile bottom button*/
