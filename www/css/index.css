@@ -91,14 +91,23 @@ body{
 /*--------------------------------------*/
 /*Login Page formatting*/
 
-#loginBody{
+#Login{
 	background-color: 	#80FF00;
 	text-align: 		center;
-	margin-top: 		50%;
+	padding-top: 		50%;
 }
 
-#loginBody *{
+#Login *{
 	margin: 			2%;
+}
+
+#loginButton{
+	background-color: 	white;
+	border: 			none;
+	padding-top: 		2%;
+	padding-right: 		12%;
+	padding-left: 		12%;
+	padding-bottom: 	2%;
 }
 
 
@@ -121,6 +130,15 @@ body{
 
 .profileInfo, .donationInfo, .facts{
 	padding-left: 		3%;
+}
+
+#logoutButton{
+	border: 			none;
+	padding-top: 		1%;
+	padding-bottom: 	1%;
+	margin-bottom: 		5%;
+	text-align: 	center;
+	background-color: rgba(128,255,0,.4)
 }
 
 
