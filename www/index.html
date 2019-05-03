@@ -1,46 +1,50 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	
-	<!-- Setting the Viewport for RWD-->
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	
-	<!-- Link the CSS file -->
-	<link rel="stylesheet" href="css/index.css">
-	
-	<!-- Call the JavaScript -->
-	<script type="text/javascript" src="js/index.js"></script>
-	
-	<title>Document</title>
+    <meta charset="UTF-8">
+
+    <!-- Setting the Viewport for RWD-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: 'unsafe-inline'
+					https://ssl.gstatic.com https://*.phonegap.com;
+				style-src 'self' 'unsafe-inline';
+				script-src  'self' 'unsafe-inline' 'unsafe-eval'
+					https://*.phonegap.com ;
+				media-src *" />
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Document</title>
 </head>
 
 <!-- onload event, show the proper tab -->
-<body onload="showLogin()">
-<!-- Start at login -> initially Stories Tab, Profile (option to logout under profile), or donations, -->
-	
-	<div id="Login" class="tabContent">
-	<!-- The start of the Login Page -->
-		<div class="loginWrapper">
-			<div class="loginPage">
-				<img src="#" alt="Logo and App Name">
-				<div class="loginForm">
-					<input id="username" type="text" placeholder="Username" autofocus="true">
-					<br>
-					<input type="text" id="Password" placeholder="Password">
-				</div>
-				<a href="#">Register</a>
-				/
-				<a href="#">Forgot Password</a><br>
+<body>
+    <!-- Start at login -> initially Stories Tab, Profile (option to logout under profile), or donations, -->
 
-				<!-- button that leads to Stories/Home Sreen, This is logging in successfuly-->
-				<button name="loginButton" onclick="showTab(event, 'Stories')">Login</button>
-			</div>
-		</div>
-	<!-- The end of the Login Table -->
-	</div>
+    <div id="Login" class="tabContent">
+        <!-- The start of the Login Page -->
+        <div class="loginWrapper">
+            <div class="loginPage">
+                <img src="#" alt="Logo and App Name">
+                <div class="loginForm">
+                    <input id="username" type="text" placeholder="Username" autofocus="true">
+                    <br>
+                    <input type="text" id="Password" placeholder="Password">
+                </div>
+                <a href="#">Register</a>
+                /
+                <a href="#">Forgot Password</a><br>
 
-	<!-- The tab directory once in any of the tabs... on Login screen DO NOT HAVE VISIBLE-->
+                <!-- button that leads to Stories/Home Sreen, This is logging in successfuly-->
+                <button name="loginButton" onclick="showTab(event, 'Stories')">Login</button>
+            </div>
+        </div>
+        <!-- The end of the Login Table -->
+    </div>
+
+    <!-- The tab directory once in any of the tabs... on Login screen DO NOT HAVE VISIBLE-->
     <ul class="tab" id="tabDirectory">
 
         <!--<li><a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">Profile</a></li>-->
@@ -49,64 +53,64 @@
         <!--<li><a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">Donations</a></li>-->
     </ul>
 
-	<div id="Stories"	class="tabContent">
-	<!-- The start of the Stories Tab -->
-		<div class="row">
-			<div class="header row col-sm-16">
-				<h1>Their Stories</h1>
-			</div>
-		</div>
+    <div id="Stories" class="tabContent">
+        <!-- The start of the Stories Tab -->
+        <div class="row">
+            <div class="header row col-sm-16">
+                <h1>Their Stories</h1>
+            </div>
+        </div>
 
-		<div class="main-content">
-			<div class="row story">
-				<div class="storyPhoto col-sm-06">
-					<img src="#" alt="Story Photo">
-				</div>
-				<div class="storySummary col-sm-10">
-					<h3>Headline</h3>
-					<p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
-				</div>
-			</div>
-			<div class="row story">
-				<div class="storyPhoto col-sm-06">
-					<img src="#" alt="Story Photo">
-				</div>
-				<div class="storySummary col-sm-10">
-					<h3>Headline</h3>
-					<p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
-				</div>
-			</div>
-			<div class="row story">
-				<div class="storyPhoto col-sm-06">
-					<img src="#" alt="Story Photo">
-				</div>
-				<div class="storySummary col-sm-10">
-					<h3>Headline</h3>
-					<p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
-				</div>
-			</div>
-			<div class="row story">
-				<div class="storyPhoto col-sm-06">
-					<img src="#" alt="Story Photo">
-				</div>
-				<div class="storySummary col-sm-10">
-					<h3>Headline</h3>
-					<p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
-				</div>
-			</div>
-			<div class="row story">
-				<div class="storyPhoto col-sm-06">
-					<img src="#" alt="Story Photo">
-				</div>
-				<div class="storySummary col-sm-10">
-					<h3>Headline</h3>
-					<p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
-				</div>
-			</div>
+        <div class="main-content">
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src="#" alt="Story Photo">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Headline</h3>
+                    <p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
+                </div>
+            </div>
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src="#" alt="Story Photo">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Headline</h3>
+                    <p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
+                </div>
+            </div>
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src="#" alt="Story Photo">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Headline</h3>
+                    <p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
+                </div>
+            </div>
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src="#" alt="Story Photo">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Headline</h3>
+                    <p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
+                </div>
+            </div>
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src="#" alt="Story Photo">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Headline</h3>
+                    <p>Short line or two summarizing the benefit of the loan as an article that links to something longer.</p>
+                </div>
+            </div>
 
 
-		</div>	
-					
+        </div>
+
 
         <div class="row">
             <div class="bottomMenu">
@@ -130,10 +134,10 @@
             </div>
         </div>
 
-	<!-- End of Stories Tab -->
-	</div>
-	
-	<!-- Start of Donations Tab -->
+        <!-- End of Stories Tab -->
+    </div>
+
+    <!-- Start of Donations Tab -->
     <div id="Donations" class="tabContent">
         <div class="row">
             <div class="header row col-sm-16">
@@ -174,13 +178,13 @@
                     <h2>Back</h2>
                 </div>
                 <div class="donateButton col-sm-08" style="background-color: #80FF00; border-left: 3px #5e5e5e solid;">
+                    <button type="button" id="donateButtonPic" onclick="takePhoto()">Donate</button>
                     <img id="worldHandsImage" src=".\Images\world.png" alt="World Image">
                     <p id="photoStatusId"></p>
                 </div>
             </div>
         </div>
 
-        <button type="button" id="donateButtonPic" onclick="takePhoto()">Donate</button>
         <br>
         <br>
         <div class="row">
@@ -207,9 +211,9 @@
 
         <!-- End of Donations Tab -->
     </div>
-	
-	<!-- Start of Profile Tab -->
-	<div id="Profile"	class="tabContent">	
+
+    <!-- Start of Profile Tab -->
+    <div id="Profile" class="tabContent">
         <div class="wrapper">
             <div class="row" style="background-color: #80FF00">
                 <div class="header row col-sm-16">
@@ -267,13 +271,13 @@
                 </div>
             </div>
 
-			<div class="row" id="logoutRow">
-				<button name="logoutButton" onclick="showLogin()">Logout</button>
-			</div>
+            <div class="row" id="logoutRow">
+                <button name="logoutButton" onclick="showLogin()">Logout</button>
+            </div>
 
-			<div class="row">
-				<div class="bottomMenu">
-					<div class="stories col-sm-08">
+            <div class="row">
+                <div class="bottomMenu">
+                    <div class="stories col-sm-08">
                         <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
                             <img src=".\Images\stories.png" alt="Stories Icon">
                         </a>
@@ -288,13 +292,15 @@
                         <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
                             <img src=".\Images\user2.png" alt="User Icon">
                         </a>
-						<p>Profile</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	<!-- End of Profile Tab -->
-	</div>
+                        <p>Profile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Profile Tab -->
+    </div>
 
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
 </body>
 </html>

@@ -11,7 +11,8 @@ document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
 
-    StatusBar.overlaysWebView(false); // force ios to show status bar
+    //StatusBar.overlaysWebView(false); // force ios to show status bar
+    showLogin();
 
     takePhotoButton = document.getElementById('donateButtonPic')
     photoStatus = document.getElementById('photoStatusId')
