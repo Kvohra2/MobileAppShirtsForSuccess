@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 
     <!-- Setting the Viewport for RWD-->
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, height=device-height, viewport-fit=cover">
 
     <meta http-equiv="Content-Security-Policy"
           content="default-src 'self' data: gap: 'unsafe-inline'
@@ -43,15 +43,6 @@
         </div>
         <!-- The end of the Login Table -->
     </div>
-
-    <!-- The tab directory once in any of the tabs... on Login screen DO NOT HAVE VISIBLE-->
-    <ul class="tab" id="tabDirectory">
-
-        <!--<li><a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">Profile</a></li>-->
-        <!-- The home tab should be the starting tab for every load. -->
-        <!--<li><a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">Stories</a></li>-->
-        <!--<li><a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">Donations</a></li>-->
-    </ul>
 
     <div id="Stories" class="tabContent">
         <!-- The start of the Stories Tab -->
@@ -294,6 +285,17 @@
             </div>
         </div>
         <!-- End of Profile Tab -->
+    </div>
+
+    <div class="tabHeight">
+        <!-- The tab directory once in any of the tabs... on Login screen DO NOT HAVE VISIBLE-->
+        <ul class="tab" id="tabDirectory">
+
+            <!--<li><a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">Profile</a></li>-->
+            <!-- The home tab should be the starting tab for every load. -->
+            <!--<li><a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">Stories</a></li>-->
+            <!--<li><a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">Donations</a></li>-->
+        </ul>
     </div>
 
     <script type="text/javascript" src="./js/index.js"></script>

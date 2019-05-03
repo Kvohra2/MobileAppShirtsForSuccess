@@ -12,6 +12,8 @@ var color
 var totalRaised
 var totalDonated
 var totalFunded
+var header
+var sticky
 
 /* wait until all phonegap/cordova is loaded then call onDeviceReady*/
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -36,6 +38,30 @@ function onDeviceReady() {
         targetWidth: 300,
         targetHeight: 400
     }
+}
+
+
+// When the user scrolls the page, execute checkSticky
+window.onscroll = function() {checkSticky()};
+
+//Find offset position on scroll, then pass to addSticky
+function checkSticky(){
+
+    for (var i = 0; i < 3; i++) {
+        header = document.getElementsByClassName("header")[i];
+
+        sticky = header.offsetTop;
+        addSticky(sticky);
+    }
+}
+
+// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function addSticky(sticky) {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
 }
 
 function takePhoto() {
