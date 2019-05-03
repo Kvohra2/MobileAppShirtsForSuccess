@@ -203,13 +203,21 @@ body{
 	width: 			20%;
 }
 
+.tabContent{
+	height: 90vh;
+}
+
+.bottomMenu{
+	height: 10vh;
+}
+
 /*Set appropriate color of all images*/
 /*This will prob need to rework to only menu icons as we add real images in future*/
-img{
+/*img{
 	filter: 			invert(25%) 
 						sepia(0%) 
 						saturate(0%) 
 						hue-rotate(49deg) 
 						brightness(95%) 
 						contrast(92%);
-}
+}*/

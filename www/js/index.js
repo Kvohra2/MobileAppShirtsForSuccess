@@ -44,7 +44,7 @@ function takePhoto() {
     totalDonated = document.getElementById('totalDonated')
     totalFunded = document.getElementById('totalFunded')
     totalRaised.innerHTML = "1";
-    totalFunded.innerHTML = "1";
+    totalFunded.innerHTML = "$0.25";
     totalDonated.innerHTML = "1";
 }
 
