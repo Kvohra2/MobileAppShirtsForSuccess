@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Setting the Viewport for RWD-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self' data: gap: 'unsafe-inline'
+					https://ssl.gstatic.com https://*.phonegap.com;
+				style-src 'self' 'unsafe-inline';
+				script-src  'self' 'unsafe-inline' 'unsafe-eval'
+					https://*.phonegap.com ;
+				media-src *" />
+    <!-- Link the CSS file -->
+    <link rel="stylesheet" href="css/index.css">
+
+    <title>Document</title>
+</head>
+
+<!-- onload event, show the proper tab -->
+<body>
+    <!-- Start at login -> initially Stories Tab, Profile (option to logout under profile), or donations, -->
+
+    <div id="Login" class="tabContent">
+        <!-- The start of the Login Page -->
+        <div class="loginWrapper">
+            <div class="loginPage">
+                <img src="#" alt="Logo and App Name">
+                <div class="loginForm">
+                    <input id="username" type="text" placeholder="Username" autofocus="true">
+                    <br>
+                    <input type="text" id="Password" placeholder="Password">
+                </div>
+                <a href="#">Register</a>
+                /
+                <a href="#">Forgot Password</a><br>
+
+                <!-- button that leads to Stories/Home Sreen, This is logging in successfuly-->
+                <button name="loginButton" onclick="showTab(event, 'Stories')">Login</button>
+            </div>
+        </div>
+        <!-- The end of the Login Table -->
+    </div>
+
+    <!-- The tab directory once in any of the tabs... on Login screen DO NOT HAVE VISIBLE-->
+    <ul class="tab" id="tabDirectory">
+
+        <!--<li><a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">Profile</a></li>-->
+        <!-- The home tab should be the starting tab for every load. -->
+        <!--<li><a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">Stories</a></li>-->
+        <!--<li><a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">Donations</a></li>-->
+    </ul>
+
+    <div id="Stories" class="tabContent">
+        <!-- The start of the Stories Tab -->
+        <div class="row">
+            <div class="header row col-sm-16">
+                <h1>Their Stories</h1>
+            </div>
+        </div>
+
+                <div class="main-content">
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src=".\Images\DonaldDuck.jpg" alt="Donald Duck">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Donald Duck</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src=".\Images\Goofy.png" alt="Goofy Geef">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Goofy Geef</h3>
+                    <p>Eius totam doloribus pariatur tempora, similique explicabo exercitationem iure molestiae dolore molestias.</p>
+                </div>
+            </div>
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src=".\Images\MickeyMouse.png" alt="Mickey Mouse">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Mickey Mouse</h3>
+                    <p>Vel hic enim illum fugit expedita perspiciatis possimus voluptatibus consectetur.</p>
+                </div>
+            </div>
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src=".\Images\Sulley.png" alt="James P. Sullivan">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>James P. Sullivan</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="row story">
+                <div class="storyPhoto col-sm-06">
+                    <img src=".\Images\Woody.png" alt="Woody">
+                </div>
+                <div class="storySummary col-sm-10">
+                    <h3>Sheriff Woody Pride</h3>
+                    <p>Eius totam doloribus pariatur tempora, similique explicabo exercitationem iure molestiae dolore molestias.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="row">
+            <div class="bottomMenu">
+                <div class="stories col-sm-08">
+                    <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
+                        <img src=".\Images\stories.png" alt="Stories Icon">
+                    </a>
+                    <p>Stories</p>
+                </div>
+                <div class="donate col-sm-04">
+                    <a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">
+                        <img src=".\Images\shirt.png" alt="Clothing Icon">
+                    </a>
+                </div>
+                <div class="myProfile col-sm-08">
+                    <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
+                        <img src=".\Images\user2.png" alt="User Icon">
+                    </a>
+                    <p>Profile</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Stories Tab -->
+    </div>
+
+    <!-- Start of Donations Tab -->
+    <div id="Donations" class="tabContent">
+        <div class="row">
+            <div class="header row col-sm-16">
+                <h1>App Name and Logo Here</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="clothingImage col-sm-16">
+                <img src="" alt="" id="photoImageId">
+            </div>
+        </div>
+
+        <div class="row" style="background-color: rgba(128,255,0,0.4);">
+            <div class="details">
+                <div class="clothingText col-sm-05">
+                    <h2>Amount:</h2>
+                    <p>Brand:</p>
+                    <p>Type:</p>
+                    <p>Color:</p>
+                </div>
+                <div class="clothingData col-sm-11">
+                    <h2 id="amountTag"></h2>
+                    <p id="brandTag"></p>
+                    <p id="typeTag"></p>
+                    <p id="colorTag"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row">
+            <div class="confirmMenu">
+                <div class="donateButton col-sm-16" style="background-color: #80FF00;">
+                    <a href="#" id="donateButtonPic" onclick="takePhoto()">
+                        <img id="worldHandsImage" src=".\Images\world.png" alt="World Image">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <br>
+        <br>
+        <div class="row">
+            <div class="bottomMenu">
+                <div class="stories col-sm-08">
+                    <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
+                        <img src=".\Images\stories.png" alt="Stories Icon">
+                    </a>
+                    <p>Stories</p>
+                </div>
+                <div class="donate col-sm-04">
+                    <a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">
+                        <img src=".\Images\shirt.png" alt="Clothing Icon">
+                    </a>
+                </div>
+                <div class="myProfile col-sm-08">
+                    <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
+                        <img src=".\Images\user2.png" alt="User Icon">
+                    </a>
+                    <p>Profile</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of Donations Tab -->
+    </div>
+
+    <!-- Start of Profile Tab -->
+    <div id="Profile" class="tabContent">
+        <div class="wrapper">
+            <div class="row" style="background-color: #80FF00">
+                <div class="header row col-sm-16">
+                    <h1>My Profile</h1>
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="row" style="background-color: #FFFFFF">
+                    <div class="profileInfo">
+                        <div class="userImg col-sm-06">
+                            <img src=".\Images\user2.png" alt="Profile Picture">
+                        </div>
+                        <div class="infoText col-sm-05">
+                            <p>Personal Info:</p>
+                            <p>Name:</p>
+                            <p>Street Address:</p>
+                            <p>City/State/Zip:</p>
+                        </div>
+                        <div class="fillText col-sm-05">
+                            <p>&nbsp;</p>
+                            <p id="nameText">Tony Stark</p>
+                            <p id="streetText">444 Taco St.</p>
+                            <p id="cityStateText">Calabasas, CA</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" style="background-color: rgba(128,255,0,0.4);">
+                    <div class="donationInfo">
+                        <div class="donation col-sm-06">
+                            <h2>My Donations</h2>
+                            <p>Total Amount Raised:</p>
+                            <p>Total Items Donated:</p>
+                            <p>Total People Funded:</p>
+                        </div>
+                        <div class="donationData col-sm-10">
+                            <h2>&nbsp;</h2><br>
+                            <p id="totalRaised" style="padding-left: 10vw;">0</p>
+                            <p id="totalDonated" style="padding-left: 10vw; padding-top: 3vh">0</p>
+                            <p id="totalFunded" style="padding-left: 10vw; padding-top: 1vh">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="facts">
+                        <div class="factInfo col-sm-09">
+                            <p>General stats/facts about the amount of people helped from all users of the app </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="logoutRow">
+                    <div class="col-sm-04">&nbsp;</div>
+                    <button name="logoutButton" onclick="showLogin()" class="col-sm-08">Logout</button><br><br>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="bottomMenu">
+                    <div class="stories col-sm-08">
+                        <a href="#" class="tabLink" id="homeTab" onclick="showTab(event, 'Stories')">
+                            <img src=".\Images\stories.png" alt="Stories Icon">
+                        </a>
+                        <p>Stories</p>
+                    </div>
+                    <div class="donate col-sm-04">
+                        <a href="#" class="tabLink" id="donationsTab" onclick="showTab(event, 'Donations')">
+                            <img src=".\Images\shirt.png" alt="Clothing Icon">
+                        </a>
+                    </div>
+                    <div class="myProfile col-sm-08">
+                        <a href="#" class="tabLink" id="profileTab" onclick="showTab(event, 'Profile')">
+                            <img src=".\Images\user2.png" alt="User Icon">
+                        </a>
+                        <p>Profile</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Profile Tab -->
+    </div>
+
+    <script type="text/javascript" src="./js/index.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>
