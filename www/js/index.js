@@ -5,6 +5,13 @@ var photoStatus
 var photoImage
 var imageFilename
 var options
+var amount
+var brand
+var type
+var color
+var totalRaised
+var totalDonated
+var totalFunded
 
 /* wait until all phonegap/cordova is loaded then call onDeviceReady*/
 document.addEventListener("deviceready", onDeviceReady, false);
@@ -33,11 +40,29 @@ function onDeviceReady() {
 
 function takePhoto() {
     navigator.camera.getPicture(photoSuccess, photoError, options)
+    totalRaised = document.getElementById('totalRaised')
+    totalDonated = document.getElementById('totalDonated')
+    totalFunded = document.getElementById('totalFunded')
+    totalRaised.innerHTML = "1";
+    totalFunded.innerHTML = "1";
+    totalDonated.innerHTML = "1";
+}
+
+function enterData() {
+    amount = document.getElementById('amountTag')
+    brand = document.getElementById('brandTag')
+    type = document.getElementById('typeTag')
+    color = document.getElementById('colorTag')
+    amount.innerHTML = "$0.25";
+    brand.innerHTML = "Michael Kors";
+    type.innerHTML = "Polo";
+    color.innerHTML = "Baby Blue";
 }
 
 function photoSuccess(imageURI) {
-    photoStatus.innerHTML = "Success!";
+    //photoStatus.innerHTML = "Success!";
     photoImage.src = imageURI
+    enterData();
 }
 
 function photoError(errorMessage) {
